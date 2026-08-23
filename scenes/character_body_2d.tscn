@@ -1,11 +1,12 @@
-[gd_scene load_steps=39 format=3 uid="uid://p0x2k2bfbtcq"]
+[gd_scene load_steps=40 format=3 uid="uid://p0x2k2bfbtcq"]
 
 [ext_resource type="Texture2D" uid="uid://bqrerwpw6mv3v" path="res://assets/images/Pink Man/Hit (32x32).png" id="1_4vejd"]
 [ext_resource type="Script" uid="uid://tnc5pepbfne0" path="res://scripts/character_body_2d.gd" id="1_ws0vm"]
 [ext_resource type="Texture2D" uid="uid://7yqlxx7ovjmk" path="res://assets/images/Pink Man/Idle (32x32).png" id="2_ws0vm"]
 [ext_resource type="Texture2D" uid="uid://cfckmlddq2moo" path="res://assets/images/Pink Man/Jump (32x32).png" id="3_rhr3r"]
 [ext_resource type="Texture2D" uid="uid://c20bigrlainjy" path="res://assets/images/Pink Man/Run (32x32).png" id="4_t53lx"]
-[ext_resource type="AudioStream" uid="uid://nfxsyilun3ui" path="res://assets/sounds/jump.wav" id="6_rhr3r"]
+[ext_resource type="AudioStream" uid="uid://b6nfsulgs7fpa" path="res://assets/sounds/recording_8BZ3kZZ7.wav" id="6_t53lx"]
+[ext_resource type="Texture2D" uid="uid://by0gf20m2nxlp" path="res://assets/images/Pink Man/rock.png" id="7_t53lx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_el37e"]
 atlas = ExtResource("2_ws0vm")
@@ -251,6 +252,7 @@ scale = Vector2(3, 3)
 script = ExtResource("1_ws0vm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xvfxd")
 animation = &"Idle"
@@ -261,4 +263,10 @@ position = Vector2(0.666667, 3.1666667)
 shape = SubResource("RectangleShape2D_ws0vm")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_rhr3r")
+stream = ExtResource("6_t53lx")
+volume_db = 24.0
+
+[node name="Rock" type="Sprite2D" parent="."]
+position = Vector2(1.3333325, 3.1666667)
+scale = Vector2(0.21354167, 0.24218753)
+texture = ExtResource("7_t53lx")
