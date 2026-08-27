@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b4regd2udxwy6"]
+
+[ext_resource type="Texture2D" uid="uid://d2rpu24n5d0cv" path="res://assets/images/Sprites/Timmy.png" id="1_nmf0k"]
+[ext_resource type="Script" uid="uid://x7g23om61tq7" path="res://scripts/timmy.gd" id="2_jox7d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7eyjs"]
+size = Vector2(73, 129)
+
+[node name="Timmy" type="Area2D" unique_id=1844062303]
+script = ExtResource("2_jox7d")
+
+[node name="Timmy" type="Sprite2D" parent="." unique_id=2136888742]
+texture_filter = 1
+position = Vector2(12, -11)
+scale = Vector2(2.6793675, 2.69)
+texture = ExtResource("1_nmf0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1273503012]
+position = Vector2(-1.5, -9.5)
+shape = SubResource("RectangleShape2D_7eyjs")
+
+[node name="Timer" type="Timer" parent="." unique_id=1723390728]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

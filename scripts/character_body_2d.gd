@@ -5,10 +5,13 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -850
-
+var alive = true
 
 func _physics_process(delta: float) -> void:
 	
+	if !alive:
+		return
+		
 	# Add animation 
 	if velocity.x > 1 or velocity.x < -1:
 		animated_sprite_2d.animation = "running" 
@@ -39,3 +42,11 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = false
 	elif direction == -1.0:
 		animated_sprite_2d.flip_h = true
+		
+@onready var sprite: Sprite2D = $PotatoMan
+
+func die() -> void:
+	#animated_sprite_2d.animation = "dying"
+	sprite.texture = preload("res://assets/images/Sprites/rock.png")
+	print("dies")
+	alive = false
