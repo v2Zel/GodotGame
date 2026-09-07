@@ -20,3 +20,7 @@ func _setup_level() -> void:
 func _on_player_died(body):
 	body.die()
 	print("killed")
+
+
+func _on_angel_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

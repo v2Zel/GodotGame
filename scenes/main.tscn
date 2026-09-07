@@ -1,36 +1,44 @@
-[gd_scene format=3 uid="uid://bpgal1ns6dilk"]
+[gd_scene load_steps=8 format=3 uid="uid://bpgal1ns6dilk"]
 
 [ext_resource type="Script" uid="uid://blbmbko8fcct5" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://d0w7ybsv1mor2" path="res://icon.svg" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://crdltgnrkpah4" path="res://scenes/levels/level_root.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b4regd2udxwy6" path="res://scenes/timmy.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bb6l3r3pewa5" path="res://scenes/angel.tscn" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://cc7hks4ckwt0a" path="res://assets/images/Sprites/coin.png" id="6_tefeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(127, 126)
 
-[node name="Main" type="Node2D" unique_id=826894803]
+[node name="Main" type="Node2D"]
+position = Vector2(2, 0)
 script = ExtResource("1_jyhfs")
 
-[node name="LevelRoot" parent="." unique_id=1781450606 instance=ExtResource("2_sugp2")]
+[node name="LevelRoot" parent="." instance=ExtResource("2_sugp2")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="LevelRoot" unique_id=404577138]
+[node name="Coin" type="Sprite2D" parent="LevelRoot"]
+texture_filter = 1
+position = Vector2(408.6667, 60.666656)
+scale = Vector2(1.623, 1.623)
+texture = ExtResource("6_tefeu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LevelRoot"]
 position = Vector2(102, 319.33334)
 scale = Vector2(0.33333334, 0.33333334)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelRoot/StaticBody2D" unique_id=1006928820]
+[node name="Sprite2D" type="Sprite2D" parent="LevelRoot/StaticBody2D"]
 texture = ExtResource("2_0wfyh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/StaticBody2D" unique_id=289141130]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/StaticBody2D"]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_sugp2")
 
-[node name="Enemies" type="Node2D" parent="LevelRoot" unique_id=1921472714]
+[node name="Enemies" type="Node2D" parent="LevelRoot"]
 position = Vector2(357, 204.33334)
 scale = Vector2(0.33333334, 0.33333334)
 
-[node name="Timmy" parent="LevelRoot/Enemies" unique_id=1844062303 instance=ExtResource("3_sugp2")]
-position = Vector2(-596, 1)
+[node name="Timmy" parent="LevelRoot/Enemies" instance=ExtResource("3_sugp2")]
+position = Vector2(-426, -2)
 
-[node name="Timmy2" parent="LevelRoot/Enemies" unique_id=1316144088 instance=ExtResource("3_sugp2")]
-position = Vector2(-28, -1)
+[node name="Angel" parent="LevelRoot/Enemies" instance=ExtResource("5_tbgi4")]
