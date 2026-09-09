@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpgal1ns6dilk"]
+[gd_scene format=3 uid="uid://bpgal1ns6dilk"]
 
 [ext_resource type="Script" uid="uid://blbmbko8fcct5" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://d0w7ybsv1mor2" path="res://icon.svg" id="2_0wfyh"]
@@ -10,35 +10,35 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
 size = Vector2(127, 126)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=983055638]
 position = Vector2(2, 0)
 script = ExtResource("1_jyhfs")
 
-[node name="LevelRoot" parent="." instance=ExtResource("2_sugp2")]
+[node name="LevelRoot" parent="." unique_id=1853849353 instance=ExtResource("2_sugp2")]
 
-[node name="Coin" type="Sprite2D" parent="LevelRoot"]
+[node name="Coin" type="Sprite2D" parent="LevelRoot" unique_id=817531172]
 texture_filter = 1
 position = Vector2(408.6667, 60.666656)
 scale = Vector2(1.623, 1.623)
 texture = ExtResource("6_tefeu")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="LevelRoot"]
+[node name="StaticBody2D" type="StaticBody2D" parent="LevelRoot" unique_id=2114009680]
 position = Vector2(102, 319.33334)
 scale = Vector2(0.33333334, 0.33333334)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="LevelRoot/StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="LevelRoot/StaticBody2D" unique_id=1992282365]
 texture = ExtResource("2_0wfyh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/StaticBody2D" unique_id=869485979]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_sugp2")
 
-[node name="Enemies" type="Node2D" parent="LevelRoot"]
+[node name="Enemies" type="Node2D" parent="LevelRoot" unique_id=1938495788]
 position = Vector2(357, 204.33334)
 scale = Vector2(0.33333334, 0.33333334)
 
-[node name="Timmy" parent="LevelRoot/Enemies" instance=ExtResource("3_sugp2")]
+[node name="Timmy" parent="LevelRoot/Enemies" unique_id=108081822 instance=ExtResource("3_sugp2")]
 position = Vector2(-426, -2)
 
-[node name="Angel" parent="LevelRoot/Enemies" instance=ExtResource("5_tbgi4")]
+[node name="Angel" parent="LevelRoot/Enemies" unique_id=1176053781 instance=ExtResource("5_tbgi4")]
