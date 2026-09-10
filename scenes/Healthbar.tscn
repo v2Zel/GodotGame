@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://7kfx5h1rbg3q"]
+
+[ext_resource type="Texture2D" uid="uid://b8mix84d0ay1h" path="res://assets/images/Healthbar/Health Bar Bar.png" id="1_8un81"]
+[ext_resource type="Texture2D" uid="uid://by8rqvbddbrat" path="res://assets/images/Healthbar/Health Bar Point.png" id="2_1iuoo"]
+
+[node name="ProgressBar" type="ProgressBar" unique_id=452582997]
+offset_right = 172.0
+offset_bottom = 27.0
+value = 60.0
+
+[node name="HealthBarBar" type="Sprite2D" parent="." unique_id=673531497]
+position = Vector2(100, 65)
+texture = ExtResource("1_8un81")
+
+[node name="HealthBarPoint1" type="Sprite2D" parent="." unique_id=1972014584]
+position = Vector2(10, 10)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint2" type="Sprite2D" parent="." unique_id=2079025100]
+position = Vector2(34, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint3" type="Sprite2D" parent="." unique_id=1483601829]
+position = Vector2(57, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint4" type="Sprite2D" parent="." unique_id=2111675746]
+position = Vector2(82, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint5" type="Sprite2D" parent="." unique_id=228894605]
+position = Vector2(106, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint6" type="Sprite2D" parent="." unique_id=344548364]
+position = Vector2(130, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint7" type="Sprite2D" parent="." unique_id=1816238222]
+position = Vector2(154, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint8" type="Sprite2D" parent="." unique_id=1844212992]
+position = Vector2(178, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint9" type="Sprite2D" parent="." unique_id=387981327]
+position = Vector2(202, 9)
+texture = ExtResource("2_1iuoo")
+
+[node name="HealthBarPoint10" type="Sprite2D" parent="." unique_id=126809019]
+position = Vector2(226, 9)
+texture = ExtResource("2_1iuoo")
