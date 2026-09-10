@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqm1lxxirsjua"]
+
+[ext_resource type="Texture2D" uid="uid://cvo5gtnwt25le" path="res://assets/images/Sprites/Potato Projectile.png" id="1_c8fcr"]
+[ext_resource type="Script" uid="uid://x7durp8matib" path="res://scenes/projectile.gd" id="1_q3m7n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxc0m"]
+radius = 0.16875608
+height = 1.602564
+
+[node name="Projectile" type="Area2D" unique_id=1805782928]
+script = ExtResource("1_q3m7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1088336672]
+scale = Vector2(42.286266, 5.8309393)
+shape = SubResource("CapsuleShape2D_qxc0m")
+
+[node name="PotatoProjectile" type="Sprite2D" parent="." unique_id=770582390]
+texture_filter = 1
+texture = ExtResource("1_c8fcr")
